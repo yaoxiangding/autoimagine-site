@@ -6,7 +6,7 @@
         content="">
   <meta name="keywords" content="">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title> Enhancing Visual Reasoning with Autonomous Imagination in Multimodal Large Language Models </title>
+  <title>Autonomous Imagination: Closed-Loop Decomposition of Visual-to-Textual Conversion in Visual Reasoning for Multimodal Large Language Models</title>
 
 
   <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
@@ -34,19 +34,19 @@
     <div class="container is-max-desktop">
       <div class="columns is-centered">
         <div class="column has-text-centered">
-          <h1 class="title is-1 publication-title">Enhancing Visual Reasoning with Autonomous Imagination in Multimodal Large Language Models</h1>
+          <h1 class="title is-1 publication-title">Autonomous Imagination: Closed-Loop Decomposition of Visual-to-Textual Conversion in Visual Reasoning for Multimodal Large Language Models</h1>
           <div class="is-size-5 publication-authors">
             <div class="is-size-5 publication-authors">
               <span class="author-block"> Jingming Liu<sup>*</sup>,</span>
               <span class="author-block"> Yumeng Li<sup>*</sup>,</span>
               <span class="author-block"> <sup></sup>Boyuan Xiao,</span>
-            </div>
-            <div class="is-size-5 publication-authors">
               <span class="author-block"> <sup></sup>Yichang Jian,</span>
               <span class="author-block"> <sup></sup>Ziang Qin,</span>
               <span class="author-block"> <sup></sup>Tianjia Shao,</span>
-              <span class="author-block"> <sup></sup>Yao-Xiang Ding,</span>
+              <span class="author-block"> <sup></sup>Yao-Xiang Ding<sup>†</sup>,</span>
               <span class="author-block"> <sup></sup>Kun Zhou</span>
+            </div>
+            <div class="is-size-5 publication-authors">
             </div>
           </div>
 
@@ -54,19 +54,20 @@
             <span class="author-block">State Key Lab of CAD&CG, Zhejiang University</span>
           </div>
           <div class="is-size-7 publication-authors">
-            <span class="author-block"><sup>*</sup>Denotes Equal Contribution</span>
+            <span class="author-block"><sup>*</sup>Equal Contribution</span>
+            <span class="author-block"><sup>†</sup>Corresponding Author</span>
           </div>
           
           <div class="column has-text-centered">
             <div class="publication-links">
               <!-- PDF Link. -->
               <span class="link-block">
-                <a href="https://arxiv.org/pdf/2411.18142"
+                <a href="https://openreview.net/forum?id=MI4yIBLprs"
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                       <i class="fas fa-file-pdf"></i>
                   </span>
-                  <span>Paper</span>
+                  <span>TMLR</span>
                 </a>
               </span>
               <span class="link-block">
@@ -78,19 +79,9 @@
                   <span>arXiv</span>
                 </a>
               </span>
-              <!-- Video Link. -->
-              <span class="link-block">
-                <a href=#
-                   class="external-link button is-normal is-rounded is-dark">
-                  <span class="icon">
-                      <i class="fab fa-youtube"></i>
-                  </span>
-                  <span>Video</span>
-                </a>
-              </span>
               <!-- Code Link. -->
               <span class="link-block">
-                <a href=#
+                <a href="https://github.com/future-item/AutoImagine"
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                       <i class="fab fa-github"></i>
@@ -100,7 +91,7 @@
               </span>
               <!-- Dataset Link. -->
               <span class="link-block">
-                <a href=#
+                <a href="https://github.com/future-item/AutoImagine"
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                       <i class="far fa-images"></i>
@@ -145,7 +136,7 @@
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
           <p>
-            There have been recent efforts to extend the Chain-of-Thought (CoT) paradigm to Multimodal Large Language Models (MLLMs) by finding visual clues in the input scene, advancing the visual reasoning ability of MLLMs. However, current approaches are specially designed for the tasks where clue finding plays a major role in the whole reasoning process, leading to the difficulty in handling complex visual scenes where clue finding does not actually simplify the whole reasoning task. To deal with this challenge, we propose a new visual reasoning paradigm enabling MLLMs to autonomously modify the input scene to new ones based on its reasoning status, such that CoT is reformulated as conducting simple closed-loop decision-making and reasoning steps under a sequence of “imagined” visual scenes, leading to natural and general CoT construction. To implement this paradigm, we introduce a novel plug-and-play “imagination space”, where MLLMs conduct visual modifications through operations like focus, ignore, and transform based on their native reasoning ability without specific training. We validate our approach through a benchmark spanning dense counting, simple jigsaw puzzle solving, and object placement, challenging the reasoning ability beyond clue finding. The results verify that while existing techniques fall short, our approach enables MLLMs to effectively reason step by step through autonomous imagination.
+Under pure textual modality, Large Language Models (LLMs) have demonstrated remarkable success in complex reasoning tasks by decomposing them into simpler sub-problems. However, Multimodal Large Language Models (MLLMs) still struggle with some seemingly straightforward visual tasks, such as counting and solving jigsaw puzzles. We argue that these tasks challenge the ability of {\it visual-to-textual conversion}, where MLLMs convert visual information perceived from the input scene, to textual information for further reasoning and generating the answer. If the complexity of the visual input is beyond the perceptual capability of the MLLMs, without decomposing this conversion process, simply scaling inference-time reasoning cannot solve the task because it repeatedly encounters the same perceptual bottleneck. We propose an approach, {\it autonomous imagination}, to enable MLLMs to iteratively modify visual inputs (e.g. isolating objects, rearranging puzzle pieces) into intermediate visual states, decomposing visual-to-textual conversion into closed-loop visual modification steps. We show that, without any retraining, MLLMs can now solve tasks initially beyond their perceptual capability, highlighting that closed-loop visual modification can be an effective way of decomposing the visual reasoning task into solvable substeps.
           </p>
         </div>
       </div>
